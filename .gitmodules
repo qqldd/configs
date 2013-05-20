@@ -1,0 +1,3 @@
+[submodule "emacs-config"]
+	path = emacs-config
+	url = git@github.com:qqldd/emacs-config.git
