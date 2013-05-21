@@ -6,7 +6,7 @@ function set_aliases() {
 	alias sudo='sudo '
 	alias dirs='dirs -v'
 	alias ec='emacsclient -t -a ""'
-	alias ecc='emacsclient -c -n -a ""'
+	alias ecc='emacsclient -c -n -a "" -F "((top .  130) (left . 400))"'
 	alias eck='emacsclient -e "(kill-emacs)"'
 }
 
