@@ -37,12 +37,4 @@ plugins=(git textmate osx cp)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/Users/myrice/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/usr/texbin
-
-export CUDA_INSTALL_PATH=/usr/local/cuda
-export PATH=$PATH:$CUDA_INSTALL_PATH/bin
-
-export P4CONFIG=".p4config"
-export P4EDITOR="subl -w"
-
-
+export PATH=$PATH:/Users/myrice/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/usr/texbin
