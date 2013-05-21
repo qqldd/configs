@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>^ </key>
+	<string>setMark:</string>
+	<key>^l</key>
+	<string>centerSelectionInVisibleArea:</string>
+	<key>^w</key>
+	<string>deleteToMark:</string>
+	<key>^x</key>
+	<dict>
+		<key>^m</key>
+		<string>selectToMark:</string>
+		<key>^s</key>
+		<string>save:</string>
+		<key>^w</key>
+		<string>saveAs:</string>
+		<key>^x</key>
+		<string>swapWithMark:</string>
+		<key>u</key>
+		<string>undo:</string>
+	</dict>
+	<key>^y</key>
+	<string>yankAndSelect:</string>
+	<key>~</key>
+	<string>deleteWordBackward:</string>
+	<key>~&lt;</key>
+	<string>moveToBeginningOfDocument:</string>
+	<key>~&gt;</key>
+	<string>moveToEndOfDocument:</string>
+	<key>~^h</key>
+	<string>deleteWordBackward:</string>
+	<key>~b</key>
+	<string>moveWordBackward:</string>
+	<key>~d</key>
+	<string>deleteWordForward:</string>
+	<key>~f</key>
+	<string>moveWordForward:</string>
+	<key>~v</key>
+	<string>pageUp:</string>
+	<key>~</key>
+	<string>deleteWordBackward:</string>
+</dict>
+</plist>
