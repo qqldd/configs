@@ -34,7 +34,8 @@ alias ohmyzsh="subl ~/.oh-my-zsh"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git textmate osx cp)
 
-source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/Users/myrice/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/usr/texbin
+export PATH=$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/usr/texbin
+
+source $ZSH/oh-my-zsh.sh

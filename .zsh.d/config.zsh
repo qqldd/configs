@@ -6,7 +6,7 @@ function set_aliases() {
 	alias sudo='sudo '
 	alias dirs='dirs -v'
 	alias ec='emacsclient -t -a ""'
-	alias ecc='emacsclient -c -n -a "" -F "((top .  130) (left . 400))"'
+	alias ecc='emacsclient -c -n -a "" ' #-F "((top .  130) (left . 400))"'
 	alias eck='emacsclient -e "(kill-emacs)"'
 }
 
@@ -19,6 +19,11 @@ function set_cuda_evn() {
 function set_perforce() {
 	export P4CONFIG=".p4config"
 	export P4EDITOR='emacsclient -t -a ""'
+	export P4PORT=aamodt-pc3:1666
+	if [[ $1 == "out" ]]; then
+		export P4PORT=localhost:6416
+		echo $P4PORT
+	fi
 }
 
 function set_cudaver() {
@@ -29,7 +34,7 @@ function set_cudaver() {
 
 function set_dirs() {
 	intersim2_root=~/Perforce/gpgpu_sim_research/intersim2/distribution	
-	gpgpusim_root=~/Perforce/gpgpu_sim_research/fermi_myrice/distribution
+	gpgpusim_root=~/Perforce/gpgpu_sim_research/fermi/distribution
 }
 
 export JYTHON_HOME=/usr/local/Cellar/jython/2.5.3/libexec
