@@ -36,6 +36,6 @@ plugins=(git textmate osx cp)
 
 
 # Customize to your needs...
-export PATH=$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/usr/texbin
+export PATH=$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin
 
 source $ZSH/oh-my-zsh.sh

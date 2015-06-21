@@ -33,7 +33,7 @@ export DYLD_LIBRARY_PATH=${CUDAHOME}/lib:$DYLD_LIBRARY_PATH
 
 # Perforce
 export P4CONFIG=".p4config"
-export P4EDITOR="emacs"
+export P4EDITOR='emacsclient -t -a ""'
 
 # Path
 export PATH=~/bin:$PATH
