@@ -37,10 +37,6 @@ function change_sdk() {
 	export SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
 }
 
-export JYTHON_HOME=/usr/local/Cellar/jython/2.5.3/libexec
-
-export CLASSPATH=$HOME/Dropbox/courseware/513/sym
-
 set_aliases
 set_dirs
 set_cudaver
@@ -51,4 +47,3 @@ EC='emacsclient -t -a ""'
 export EDITOR=$SUBL
 export LSCOLORS=exBxhxDxfxhxhxhxhxcxcx
 ulimit -S -n 1024
-source ~/Softwares/z/z.sh
