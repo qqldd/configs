@@ -8,11 +8,11 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="agnoster-my"
 
 # For theme, do not display my name on my machine
-DEFAULT_USER="myrice"
+DEFAULT_USER="whoami"
 
 # Example aliases
-alias zshconfig="subl ~/.zshrc"
-alias ohmyzsh="subl ~/.oh-my-zsh"
+alias zshconfig="$EDITOR ~/.zshrc"
+alias ohmyzsh="$EDITOR ~/.oh-my-zsh"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -32,10 +32,10 @@ alias ohmyzsh="subl ~/.oh-my-zsh"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rsync osx cp z)
+plugins=(git rsync ls cp z jump ssh-agent tmux)
 
 
 # Customize to your needs...
-export PATH=$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin
+export PATH=$HOME/bin:$HOME/usr/bin:/usr/bin:/usr/sbin:/usr/local/sbin:/usr/local/bin:/bin:/sbin:$PATH
 
 source $ZSH/oh-my-zsh.sh
