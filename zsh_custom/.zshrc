@@ -8,7 +8,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="agnoster-my"
 
 # For theme, do not display my name on my machine
-DEFAULT_USER="whoami"
+DEFAULT_USER="`whoami`"
 
 # Example aliases
 alias zshconfig="$EDITOR ~/.zshrc"
