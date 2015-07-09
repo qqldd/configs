@@ -32,8 +32,7 @@ alias ohmyzsh="$EDITOR ~/.oh-my-zsh"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rsync ls cp z jump ssh-agent tmux)
-
+plugins=(git rsync ls cp z jump tmux)
 
 # Customize to your needs...
 ZSH_CUSTOM=$HOME/configs/zsh_custom

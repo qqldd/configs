@@ -28,6 +28,7 @@ function set_env() {
 	export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin
 }
 
+set_env
 set_dirs
 set_cudaver
 #change_sdk
