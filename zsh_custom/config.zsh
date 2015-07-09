@@ -12,7 +12,7 @@ function set_aliases() {
 }
 
 function set_perforce() {
-	export P4CONFIG=".p4config"
+	export P4CONFIG="$HOME/.p4config"
 }
 
 function set_dirs() {
