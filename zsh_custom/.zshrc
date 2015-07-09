@@ -38,6 +38,8 @@ plugins=(git rsync ls cp z jump ssh-agent tmux)
 # Customize to your needs...
 ZSH_CUSTOM=$HOME/configs/zsh_custom
 
-# export PATH=$HOME/bin:$HOME/usr/bin:/usr/bin:/usr/sbin:/usr/local/sbin:/usr/local/bin:/bin:/sbin:$PATH
+if [[ -z "$PATH" ]]; then
+    export PATH=$HOME/bin:/usr/bin:/usr/sbin:/bin:/sbin
+fi
 
 source $ZSH/oh-my-zsh.sh
