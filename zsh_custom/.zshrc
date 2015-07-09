@@ -36,6 +36,6 @@ plugins=(git rsync ls cp z jump ssh-agent tmux)
 
 
 # Customize to your needs...
-export PATH=$HOME/bin:$HOME/usr/bin:/usr/bin:/usr/sbin:/usr/local/sbin:/usr/local/bin:/bin:/sbin:$PATH
+export PATH=$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin
 
 source $ZSH/oh-my-zsh.sh

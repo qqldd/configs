@@ -4,10 +4,6 @@ function tabname() {
 	echo -e "\033];$1\007";
 }
 
-function gpusim_env() {
-	
-}
-
 function brewlist() {
 	if [[ $1 == "deps" ]]; then
 		brew list | while read cask; do echo -n $fg[blue] $cask $fg[white]; brew deps $cask | awk '{printf(" %s ", $0)}'; echo ""; done
