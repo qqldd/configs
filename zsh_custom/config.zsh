@@ -22,4 +22,9 @@ set_aliases
 set_dirs
 set_perforce
 export LSCOLORS=exBxhxDxfxhxhxhxhxcxcx
+if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+        export TERM='xterm-256color'
+else
+        export TERM='xterm-color'
+fi
 

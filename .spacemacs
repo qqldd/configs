@@ -163,7 +163,7 @@ layers configuration."
   (setq dired-listing-switches "-alh")
   (setq-default dotspacemacs-smartparens-strict-mode t)
   (add-to-list 'spacemacs-indent-sensitive-modes '(c-mode c++-mode text-mode))
-
+  (setq helm-echo-input-in-header-line 'nil)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
