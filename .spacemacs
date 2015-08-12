@@ -25,9 +25,9 @@
      ;; syntax-checking
      c-c++ shell-scripts python csv emacs-lisp shell sql
      git perforce
-     auto-completion gtags irony-mode
+     auto-completion gtags irony-mode semantic syntax-checking
      colors themes-megapack
-
+     org
      )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
@@ -163,7 +163,7 @@ layers configuration."
   (setq dired-listing-switches "-alh")
   (setq-default dotspacemacs-smartparens-strict-mode t)
   (add-to-list 'spacemacs-indent-sensitive-modes '(c-mode c++-mode text-mode))
-  (setq helm-echo-input-in-header-line 'nil)
+  (setq vc-follow-symlinks t)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
