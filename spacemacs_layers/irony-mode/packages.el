@@ -10,21 +10,17 @@
 ;;
 ;;; License: GPLv3
 
-(defvar irony-mode-packages
+(setq irony-mode-packages
   '(
     ;; package irony-modes go here
     irony
     company-irony
     flycheck-irony
-    )
-  "List of all packages to install and/or initialize. Built-in packages
-which require an initialization must be listed explicitly in the list.")
-
-(defvar irony-mode-excluded-packages
+    ))
+(setq irony-mode-excluded-packages
   '(
     auto-complete-clang
-    )
-  "List of packages to exclude.")
+    ))
 
 ;; For each package, define a function irony-mode/init-<package-irony-mode>
 ;;
@@ -51,26 +47,34 @@ which require an initialization must be listed explicitly in the list.")
                   (define-key irony-mode-map [remap complete-symbol]
                     'irony-completion-at-point-async)))
       (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
-      (spacemacs|diminish irony-mode "I" " I")
+      (spacemacs|diminish irony-mode "ⓘ" " I")
       )))
 
-(defun irony-mode/init-company-irony ()
-  (use-package company-irony
-    :defer t
-    :init
-    (progn
-      (eval-after-load 'company
-        '(add-to-list 'company-backends 'company-irony))
-      (add-hook 'irony-mode-hook 'company-irony-setup-begin-commands)
-      (add-hook 'irony-mode-hook 'company-mode))))
+;; Hook company to irony-mode
+(defun irony-mode/post-init-company()
+  (spacemacs|add-company-hook c-mode-common))
+
+;; Configure the packages
+(when (configuration-layer/layer-usedp 'auto-completion)
+  ;; Add the backend to the major-mode specific backend list
+  (defun irony-mode/init-company-irony()
+    (use-package company-irony
+      :if (configuration-layer/package-usedp 'company)
+      :defer t
+      :init
+      (progn
+        (push 'company-irony company-backends-c-mode-common)
+        (add-hook 'irony-mode-hook 'company-irony-setup-begin-commands)
+        (add-hook 'irony-mode-hook 'company-mode)))))
 
 (defun irony-mode/init-flycheck-irony ()
   (use-package flycheck-irony
-    ;; :defer t                            ; fix this ???
-    ;; :init
-    ;; (progn
-    ;;   (eval-after-load 'flycheck
-    ;;     '(add-to-list 'flycheck-checkers 'irony))
-    ;;   (add-hook 'irony-mode-hook 'flycheck-mode))
-    ))
+    :defer t                            ; fix this ???
+    :init
+    (progn
+      (eval-after-load 'flycheck
+        '(add-hook 'flycheck-mode-hook #'flycheck-irony-setup))
+      (add-hook 'irony-mode-hook 'flycheck-mode))
+    )
+)
 
