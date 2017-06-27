@@ -5,10 +5,12 @@ function set_aliases() {
 	alias mv='mv -i'
 	alias sudo='sudo '
 	alias dirs='dirs -v'
-	alias ec='emacsclient -t -a ""'
-	alias ecn='emacsclient -n'
-	alias ecc='emacsclient -c -n -a "" ' #-F "((top .  130) (left . 400))"'
+	alias ec='emacsclient -a ""'
+	alias ect='emacsclient -t -a ""'
+	alias ecc='emacsclient -c -a ""'
+  alias ecn='emacsclient -n'
 	alias eck='emacsclient -e "(kill-emacs)"'
+  alias emacsd='emacs --daemon'
 }
 
 function set_perforce() {
@@ -23,4 +25,4 @@ set_aliases
 set_dirs
 set_perforce
 export LSCOLORS=exBxhxDxfxhxhxhxhxcxcx
-
+export EDITOR='emacsclient -a ""'
