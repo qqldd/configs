@@ -303,6 +303,7 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
+  (setq-default git-magit-status-fullscreen t)
   )
 
 (defun dotspacemacs/user-config ()
@@ -324,6 +325,7 @@ you should place your code here."
   (setq dired-listing-switches "-alh")
   ;; (setq-default dotspacemacs-smartparens-strict-mode t)
   ;; (add-to-list 'spacemacs-indent-sensitive-modes '(c-mode c++-mode text-mode))
+  (setq linum-format "%d ")
   (setq vc-follow-symlinks t)
 
   )
