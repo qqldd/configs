@@ -52,7 +52,7 @@ values."
      c-c++ shell-scripts python csv emacs-lisp shell sql
      git
      auto-completion gtags irony-mode semantic syntax-checking
-     colors themes-megapack
+     colors
      org
      )
    ;; List of additional packages that will be installed without being
