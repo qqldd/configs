@@ -7,7 +7,7 @@ function set_aliases() {
     alias dirs='dirs -v'
     alias ec='emacsclient -a ""'
     alias ect='emacsclient -t -a ""'
-    alias ecc='emacsclient -c -a ""'
+    alias ecc='emacsclient -n -c -a ""'
     alias ecn='emacsclient -n'
     alias eck='emacsclient -e "(kill-emacs)"'
     alias emacsd='emacs --daemon'
