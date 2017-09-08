@@ -1,0 +1,96 @@
+! URxvt config
+URxvt.perl-lib: /usr/local/google/home/dongdongli/configs/urxvt
+
+URxvt.termName: rxvt-256color
+URxvt.font: xft:DejaVu Sans Mono for Powerline:size=9
+
+URxvt*background:                     #151718
+URxvt*foreground:                     #d6d6d6
+URxvt*cursorColor:                    #d6d6d6
+
+! URxvt*colorBD:                        color
+! URxvt*colorIT:                        color
+! URxvt*colorUL:                        color
+! URxvt*colorRV:                        color
+! URxvt*underlineColor:                 color
+URxvt*scrollColor:                    #d6d6d6
+! URxvt*troughColor:                    color
+URxvt*highlightColor:                 #3B758C
+URxvt*highlightTextColor:             #43a5d5
+! URxvt*cursorColor2:                   color
+! URxvt*pointerColor:                   color
+! URxvt*pointerColor2:                  color
+URxvt*borderColor:                    #101218
+! URxvt*tab-bg:                         colour
+! URxvt*tab-fg:                         colour
+! URxvt*tabbar-bg:                      colour
+! URxvt*tabbar-fg:                      colour
+
+URxvt*color0:                         #151718
+URxvt*color1:                         #Cd3f45
+URxvt*color2:                         #9fca56
+URxvt*color3:                         #e6cd69
+URxvt*color4:                         #258ad2
+URxvt*color5:                         #a074c4
+URxvt*color6:                         #55dbbe
+URxvt*color7:                         #d6d6d6
+
+URxvt*color8:                         #41535B
+URxvt*color9:                         #Cd3f45
+URxvt*color10:                        #9fca56
+URxvt*color11:                        #e6cd69
+! URxvt*color12:                        #55b5db
+URxvt*color12:                        #258ad2
+URxvt*color13:                        #a074c4
+URxvt*color14:                        #55dbbe
+URxvt*color15:                        #ffffff
+
+! 256 color space
+URxvt*color16:                        #db7b55
+URxvt*color17:                        #8a553f
+URxvt*color18:                        #8ec43d
+URxvt*color19:                        #3B758C
+URxvt*color20:                        #43a5d5
+URxvt*color21:                        #eeeeee
+
+Xcursor.size: 16W
+URxvt.scrollBar: false
+URxvt.url-launcher: /usr/bin/google-chrome
+
+URxvt*loginShell:  true
+URxvt*fading:  30
+
+URxvt.internalBorder: 0
+URxvt.externalBorder:0 
+
+URxvt.iso14755 : false
+
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+
+URxvt.urgentOnBell: true
+
+URxvt.perl-ext:  default,matcher,tabbedex,searchable-scrollback<M-s>,resize-font
+! URxvt.perl-ext:  default,selection,matcher
+! URxvt.perl-ext:  default,matcher,tabbedex,keyboard-select
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-s: perl:keyboard-select:search
+
+
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+
+URxvt.matcher.button: C1
+
+URxvt.keysym.C-Delete: perl:matcher:last
+URxvt.keysym.M-Delete: perl:matcher:list
+URxvt.matcher.rend.0: Uline Bold fg5
+URxvt.colorUL: #4682B4
+
+
+! transparent
+URxvt*depth: 32
+URxvt*background: rgba:0000/0000/0200/c800

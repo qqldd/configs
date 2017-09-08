@@ -1,0 +1,38 @@
+XTerm.vt100.saveLines: 65536
+XTerm.termName: xterm-256color
+XTerm.vt100.reverseVideo: true
+XTerm.vt100.faceName: DejaVu Sans Mono for Powerline:style=Book:size=10:antialias=false
+! Term.vt100.font: 7x13
+
+XTerm.vt100*color0:                         #151718
+XTerm.vt100*color1:                         #Cd3f45
+XTerm.vt100*color2:                         #9fca56
+XTerm.vt100*color3:                         #e6cd69
+XTerm.vt100*color4:                         #258ad2
+XTerm.vt100*color5:                         #a074c4
+XTerm.vt100*color6:                         #55dbbe
+XTerm.vt100*color7:                         #d6d6d6
+
+XTerm.vt100*color8:                         #41535B
+XTerm.vt100*color9:                         #Cd3f45
+XTerm.vt100*color10:                        #9fca56
+XTerm.vt100*color11:                        #e6cd69
+! XTerm.vt100*color12:                        #55b5db
+XTerm.vt100*color12:                        #258ad2
+XTerm.vt100*color13:                        #a074c4
+XTerm.vt100*color14:                        #55dbbe
+XTerm.vt100*color15:                        #ffffff
+
+! 256 color space
+XTerm.vt100*color16:                        #db7b55
+XTerm.vt100*color17:                        #8a553f
+XTerm.vt100*color18:                        #8ec43d
+XTerm.vt100*color19:                        #3B758C
+XTerm.vt100*color20:                        #43a5d5
+XTerm.vt100*color21:                        #eeeeee
+
+XTerm.vt100.translations: #override \n\
+                          Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+                          Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
+
+XTerm.vt100.bellIsUrgent: true

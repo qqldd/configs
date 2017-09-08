@@ -1,0 +1,9 @@
+Xft.antialias:  true 
+Xft.rgba:       rgb 
+Xft.hinting:    true 
+Xft.hintstyle:  hintslight 
+Xft.lcdfilter:  lcddefault 
+
+#include ".Xresources.d/emacs"
+#include ".Xresources.d/urxvt"
+#include ".Xresources.d/xterm"
