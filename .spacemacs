@@ -327,6 +327,7 @@ you should place your code here."
   ;; (add-to-list 'spacemacs-indent-sensitive-modes '(c-mode c++-mode text-mode))
   (setq linum-format "%d ")
   (setq vc-follow-symlinks t)
+  (add-to-list 'load-path "~/configs/lisp/")
 
   )
 
