@@ -15,8 +15,6 @@ function set_aliases() {
   alias open='xdg-open'
 }
 
-}
-
 function set_perforce() {
   export P4ENVIRO="$HOME/.p4config"
   export P4CONFIG=".p4config"
