@@ -1,0 +1,44 @@
+[global_config]
+  enabled_plugins = ActivityWatch, TerminalShot, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  scroll_tabbar = True
+  title_font = 10
+  title_inactive_bg_color = "#a8c0e2"
+  title_receive_bg_color = "#c80003"
+  title_transmit_bg_color = "#204a87"
+  title_use_system_font = False
+[keybindings]
+  broadcast_all = None
+  broadcast_group = None
+  broadcast_off = None
+  next_tab = <Alt>braceright
+  prev_tab = <Alt>braceleft
+  switch_to_tab_1 = <Alt>1
+  switch_to_tab_2 = <Alt>2
+  switch_to_tab_3 = <Alt>3
+  switch_to_tab_4 = <Alt>4
+  switch_to_tab_5 = <Alt>5
+  switch_to_tab_6 = <Alt>6
+  switch_to_tab_7 = <Alt>7
+  switch_to_tab_8 = <Alt>8
+  switch_to_tab_9 = <Alt>9
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      profile = default
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_color = "#282828"
+    background_darkness = 0.83
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    font = DejaVuSansMono Nerd Font 10
+    foreground_color = "#ebdbb2"
+    palette = "#151718:#cd3f45:#9fca56:#fce94f:#258ad2:#a074c4:#55dbbe:#d6d6d6:#41535b:#cd3f45:#9fca56:#e6cd69:#258ad2:#a074c4:#55dbbe:#ffffff"
+    scrollback_lines = 65536
+    use_system_font = False
