@@ -37,7 +37,7 @@
     background_darkness = 0.83
     background_type = transparent
     cursor_color = "#aaaaaa"
-    font = DejaVuSansMono Nerd Font 10
+    font = DejaVuSansMono Nerd Font 9
     foreground_color = "#ebdbb2"
     palette = "#151718:#cd3f45:#9fca56:#fce94f:#258ad2:#a074c4:#55dbbe:#d6d6d6:#41535b:#cd3f45:#9fca56:#e6cd69:#258ad2:#a074c4:#55dbbe:#ffffff"
     scrollback_lines = 65536
