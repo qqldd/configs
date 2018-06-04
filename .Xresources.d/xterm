@@ -1,8 +1,8 @@
 XTerm.vt100.saveLines: 65536
 XTerm.termName: xterm-256color
 XTerm.vt100.reverseVideo: true
-XTerm.vt100.faceName: DejaVu Sans Mono for Powerline:style=Book:size=10:antialias=false
-! Term.vt100.font: 7x13
+XTerm.vt100.faceName: xft:DejaVuSansMono Nerd Font:size=9
+UXTerm.vt100.faceName: xft:DejaVuSansMono Nerd Font:size=9
 
 XTerm.vt100*color0:                         #151718
 XTerm.vt100*color1:                         #Cd3f45

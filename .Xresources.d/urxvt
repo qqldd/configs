@@ -2,7 +2,7 @@
 URxvt.perl-lib: /usr/local/google/home/dongdongli/configs/urxvt
 
 URxvt.termName: rxvt-256color
-URxvt.font: xft:DejaVu Sans Mono for Powerline:size=9
+URxvt.font: xft:DejaVuSansMono Nerd Font:size=9
 
 URxvt*background:                     #151718
 URxvt*foreground:                     #d6d6d6
