@@ -40,8 +40,8 @@ values."
      ;; auto-completion
      ;; better-defaults
      emacs-lisp
-     ;; git
-     ;; markdown
+     git
+     markdown
      ;; org
      ;; (shell :variables
      ;;        shell-default-height 30
@@ -49,11 +49,23 @@ values."
      ;; spell-checking
      ;; syntax-checking
      ;; version-control
-     c-c++ shell-scripts python csv emacs-lisp shell sql
-     git
-     auto-completion gtags irony-mode semantic syntax-checking
+     (version-control :variables
+                      version-control-diff-tool 'diff-hl)
+     ;; (c-c++ :variables
+     ;;        c-c++-default-mode-for-headers 'c++-mode)
+     shell-scripts
+     ;; python
+     ;; (go :variables go-tab-width 2)
+     csv
+     shell
+     auto-completion
+     gtags
+     ;; irony-mode
+     ;; semantic
+     syntax-checking
      colors
      org
+     yaml
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -145,8 +157,8 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Source Code Pro"
-                               :size 16
+   dotspacemacs-default-font '("DejaVuSansMono Nerd Font"
+                               :size 12
                                :weight normal
                                :width normal
                                :powerline-scale 1.0)
@@ -259,8 +271,18 @@ values."
    ;; scrolling overrides the default behavior of Emacs which recenters point
    ;; when it reaches the top or bottom of the screen. (default t)
    dotspacemacs-smooth-scrolling t
-   ;; If non nil line numbers are turned on in all `prog-mode' and `text-mode'
-   ;; derivatives. If set to `relative', also turns on relative line numbers.
+   ;; Control line numbers activation.
+   ;; If set to `t' or `relative' line numbers are turned on in all `prog-mode' and
+   ;; `text-mode' derivatives. If set to `relative', line numbers are relative.
+   ;; This variable can also be set to a property list for finer control:
+   ;; '(:relative nil
+   ;;   :disabled-for-modes dired-mode
+   ;;                       doc-view-mode
+   ;;                       markdown-mode
+   ;;                       org-mode
+   ;;                       pdf-view-mode
+   ;;                       text-mode
+   ;;   :size-limit-kb 1000)
    ;; (default nil)
    dotspacemacs-line-numbers t
    ;; Code folding method. Possible values are `evil' and `origami'.
@@ -303,7 +325,10 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
+  (add-to-list 'load-path "~/configs/lisp/")
   (setq-default git-magit-status-fullscreen t)
+  (require 'funs)
+
   )
 
 (defun dotspacemacs/user-config ()
@@ -313,8 +338,22 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  ;; (setq linum-format "%4d \u2502 ")
-  (global-hl-line-mode -1)
+
+  ;; Appearance
+  (set-face-background 'hl-line "gray27")
+  (set-face-background 'highlight "CornflowerBlue")
+
+  (setq linum-format "%d ")
+  (set-frame-font "-PfEd-DejaVuSansMono Nerd Font-normal-normal-normal-*-12-*-*-*-*-0-iso10646-1" nil t)
+  ;; (add-to-list 'default-frame-alist '(width . 2000))
+  ;; (add-to-list 'default-frame-alist '(height . 320))
+
+  (setq scroll-margin 10)
+
+  (add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode)
+  (semantic-mode 1)
+  (require 'stickyfunc-enhance)
+
   (setq paradox-github-token '01f2c4c6a73eda84935bcacc074b61cb1026596b)
 
   ;; copy to system clipboard
@@ -323,11 +362,21 @@ you should place your code here."
 
   ;; dired ls argument
   (setq dired-listing-switches "-alh")
-  ;; (setq-default dotspacemacs-smartparens-strict-mode t)
-  ;; (add-to-list 'spacemacs-indent-sensitive-modes '(c-mode c++-mode text-mode))
-  (setq linum-format "%d ")
+
   (setq vc-follow-symlinks t)
-  (add-to-list 'load-path "~/configs/lisp/")
+  (setq browse-url-browser-function 'browse-url-chrome)
+
+  (global-git-commit-mode t)
+
+  (require 'helm-xref)
+  (setq xref-show-xrefs-function 'helm-xref-show-xrefs)
+
+  (setq org-default-notes-file "~/notes.org")
+
+  ;; Key configs
+  (global-set-key [C-M-backspace] #'backward-kill-sexp)
+
+
 
   )
 
