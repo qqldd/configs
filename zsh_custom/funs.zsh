@@ -4,10 +4,10 @@
 function tmux-sendall() {
   command=$1
   session=$2
-  windows=$(tmux list-windows)
-  if [[ -n $session ]]; then
-    windows=$(tmux list-windows -t $session)
+  if [[ -z $session ]]; then
+    session=$(tmux display -p '#S') # default to current session
   fi
+  windows=$(tmux list-windows)
   echo $windows |cut -d: -f1|xargs -I{} tmux send-keys -t $session:{} $command
 }
 
