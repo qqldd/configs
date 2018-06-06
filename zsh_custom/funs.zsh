@@ -1,3 +1,17 @@
+# Useful functions
+
+# tmux send command to all windows
+function tmux-sendall() {
+  command=$1
+  session=$2
+  windows=$(tmux list-windows)
+  if [[ -n $session ]]; then
+    windows=$(tmux list-windows -t $session)
+  fi
+  echo $windows |cut -d: -f1|xargs -I{} tmux send-keys -t $session:{} $command
+}
+
+
 # fzf related, please see https://github.com/junegunn/fzf/wiki/examples
 
 # fh - repeat history
