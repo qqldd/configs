@@ -375,7 +375,8 @@ you should place your code here."
 
   ;; Key configs
   (global-set-key [C-M-backspace] #'backward-kill-sexp)
-
+  (global-set-key (kbd "C-x C-b") 'ibuffer)
+  (global-set-key (kbd "C-S-k") 'copy-line)
 
 
   )
