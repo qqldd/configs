@@ -298,4 +298,3 @@ set-option -ga terminal-overrides ",xterm-256color*:Tc"
 # send command to all windows
 bind C-e command-prompt -p "command: " "run-shell \"tmux list-windows \| cut -d: -f1\|xargs -I\{\} tmux send-keys -t :\{\} %1\""
 
-set -g status-left "#S #[fg=green,bg=black]#(tmux-mem-cpu-load --colors --interval 2)#[default]"
