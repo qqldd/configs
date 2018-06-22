@@ -15,7 +15,7 @@ echo "Linking .tmux/.tmux.conf to ~/.tmux.conf"
 ln -s ${MYDIR}/.tmux/.tmux.conf $HOME/
 
 echo "Linking .tmux/.tmux.conf.local to ~/.tmux.conf.local"
-ln -s ${MYDIR}/.tmux/.tmux.conf.local $HOME/
+ln -s ${MYDIR}/.tmux.conf.local $HOME/
 
 echo "Linking .zshrc to ~/.zshrc"
 ln -s ${MYDIR}/.zshrc $HOME/
@@ -28,6 +28,9 @@ ln -sn ${MYDIR}/.Xresources.d $HOME/
 
 echo "Linking .cgdb to ~/.cgdb"
 ln -sn ${MYDIR}/.cgdb $HOME/
+
+echo "making dir ~/.config is not exsit"
+mkdir $HOME/.config
 
 echo "Linking items in .config to ~/.config"
 for i in `ls .config`; do
