@@ -38,3 +38,17 @@ export LSCOLORS=exBxhxDxfxhxhxhxhxcxcx
 export EDITOR='emacsclient -a "" -t'
 export PKG_CONFIG_PATH=$HOME/usr/lib/pkgconfig
 
+# key shortcuts
+# Runs zle down-case-word when run on a non-empty line, and ls otherwise.
+function _magic-alt-l () {
+  if [[ -z "$BUFFER" ]]; then
+    BUFFER="ls"
+    zle accept-line
+  else
+    zle down-case-word
+  fi
+}
+zle -N _magic-alt-l
+
+bindkey '\el' _magic-alt-l
+
