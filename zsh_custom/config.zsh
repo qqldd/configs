@@ -38,6 +38,12 @@ export LSCOLORS=exBxhxDxfxhxhxhxhxcxcx
 export EDITOR='emacsclient -a "" -t'
 export PKG_CONFIG_PATH=$HOME/usr/lib/pkgconfig
 
+# less highlight!
+if [[ -f "/usr/share/source-highlight/src-hilite-lesspipe.sh" ]]; then
+  export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
+  export LESS=" -R "
+fi
+
 # key shortcuts
 # Runs zle down-case-word when run on a non-empty line, and ls otherwise.
 function _magic-alt-l () {
