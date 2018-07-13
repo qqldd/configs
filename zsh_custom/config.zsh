@@ -12,7 +12,7 @@ function set_aliases() {
   alias eck='emacsclient -e "(kill-emacs)"'
   alias emacsd='emacs --daemon'
   alias diff='colordiff'
-  alias open='xdg-open'
+  [[ "$(uname -s)" == "Linux" ]] && alias open='xdg-open'
 }
 
 function set_perforce() {
