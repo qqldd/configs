@@ -345,7 +345,7 @@ you should place your code here."
   (set-face-background 'highlight "CornflowerBlue")
 
   (setq linum-format "%d ")
-  (set-frame-font "-PfEd-DejaVuSansMono Nerd Font-normal-normal-normal-*-12-*-*-*-*-0-iso10646-1" nil t)
+  ;; (set-frame-font "-PfEd-DejaVuSansMono Nerd Font-normal-normal-normal-*-12-*-*-*-*-0-iso10646-1" nil t)
   ;; (add-to-list 'default-frame-alist '(width . 2000))
   ;; (add-to-list 'default-frame-alist '(height . 320))
 
