@@ -374,6 +374,9 @@ you should place your code here."
 
   (setq org-default-notes-file "~/notes.org")
 
+  ;; do not create .#file
+  (setq create-lockfiles nil)
+
   ;; Key configs
   (global-set-key [C-M-backspace] #'backward-kill-sexp)
   (global-set-key (kbd "C-x C-b") 'ibuffer)
