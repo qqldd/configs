@@ -11,11 +11,14 @@ ln -sn ${MYDIR}/spacemacs $HOME/.emacs.d
 echo "Linking .spacemacs to ~/.spacemacs"
 ln -s ${MYDIR}/.spacemacs $HOME/
 
-echo "Linking .tmux/.tmux.conf to ~/.tmux.conf"
-ln -s ${MYDIR}/.tmux/.tmux.conf $HOME/
+echo "Linking .tmux.conf to ~/.tmux.conf"
+ln -s ${MYDIR}/.tmux.conf $HOME/
 
-echo "Linking .tmux/.tmux.conf.local to ~/.tmux.conf.local"
-ln -s ${MYDIR}/.tmux.conf.local $HOME/
+# echo "Linking .tmux/.tmux.conf to ~/.tmux.conf"
+# ln -s ${MYDIR}/.tmux/.tmux.conf $HOME/
+
+# echo "Linking .tmux/.tmux.conf.local to ~/.tmux.conf.local"
+# ln -s ${MYDIR}/.tmux.conf.local $HOME/
 
 echo "Linking .zshrc to ~/.zshrc"
 ln -s ${MYDIR}/.zshrc $HOME/
