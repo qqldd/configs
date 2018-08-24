@@ -13,6 +13,7 @@ function set_aliases() {
   alias emacsd='emacs --daemon'
   alias diff='colordiff'
   [[ "$(uname -s)" == "Linux" ]] && alias open='xdg-open'
+  alias scrotclip='scrot -s /tmp/foo123.png && xclip -selection clipboard -t image/png -i /tmp/foo123.png'
 }
 
 function set_perforce() {
