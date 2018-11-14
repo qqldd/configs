@@ -64,6 +64,7 @@ values."
      ;; semantic
      syntax-checking
      colors
+     theming
      org
      yaml
      )
@@ -327,6 +328,21 @@ before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
   (setq-default git-magit-status-fullscreen t)
 
+  (setq theming-modifications
+        '((tangotango
+           (hl-line :background "gray27")
+           (highlight :background "SlateGrey")
+           (region :background "DimGrey")
+           (company-tooltip :background "gray27" :foreground "wheat")
+           (company-tooltip-selection :background "SlateGrey")
+           (company-preview :background "SlateGrey" :foreground "wheat")
+           (company-tooltip-common :inherit company-tooltip)
+           (company-tooltip-common-selection :inherit company-tooltip-selection)
+           (company-preview-common :inherit company-preview)
+           (company-echo-common :inherit company-tooltip)
+           (company-scrollbar-bg :background "gray27")
+           (company-scrollbar-fg :background "wheat")
+           )))
   )
 
 (defun dotspacemacs/user-config ()
@@ -337,20 +353,24 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
 
-  (add-to-list 'load-path "~/configs/lisp/")
+  (let ((default-directory  "~/configs/lisp/"))
+    (setq load-path
+          (append
+           (let ((load-path  (copy-sequence load-path))) ;; Shadow
+             (append
+              (copy-sequence (normal-top-level-add-to-load-path '(".")))
+              (normal-top-level-add-subdirs-to-load-path)))
+           load-path)))
+
   (require 'funs)
 
   ;; Appearance
-  (set-face-background 'hl-line "gray27")
-  (set-face-background 'highlight "CornflowerBlue")
 
   (setq linum-format "%d ")
-  ;; (set-frame-font "-PfEd-DejaVuSansMono Nerd Font-normal-normal-normal-*-12-*-*-*-*-0-iso10646-1" nil t)
-  ;; (add-to-list 'default-frame-alist '(width . 2000))
-  ;; (add-to-list 'default-frame-alist '(height . 320))
 
   (setq scroll-margin 10)
 
+  ;; semantics
   (add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode)
   (semantic-mode 1)
   (require 'stickyfunc-enhance)
