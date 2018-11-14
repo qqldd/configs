@@ -334,6 +334,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
            (highlight :background "SlateGrey")
            (region :background "DimGrey")
            (company-tooltip :background "gray27" :foreground "wheat")
+           (company-tooltip-annotation :foreground "wheat3")
            (company-tooltip-selection :background "SlateGrey")
            (company-preview :background "SlateGrey" :foreground "wheat")
            (company-tooltip-common :inherit company-tooltip)
