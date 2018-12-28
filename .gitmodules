@@ -7,3 +7,6 @@
 [submodule "spacemacs"]
 	path = spacemacs
 	url = https://github.com/syl20bnr/spacemacs.git
+[submodule "zsh_custom/plugins/zsh-autosuggestions"]
+	path = zsh_custom/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
