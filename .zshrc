@@ -65,7 +65,7 @@ ZSH_CUSTOM=$HOME/configs/zsh_custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git rsync ls cp jump alias-tips common-aliases extract copybuffer zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git rsync cp jump common-aliases extract copybuffer zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
