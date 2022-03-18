@@ -635,7 +635,7 @@ before packages are loaded."
   (setq vc-follow-symlinks t)
   (setq browse-url-browser-function 'browse-url-chrome)
 
-  (global-git-commit-mode t)
+  ;; (global-git-commit-mode t)
 
   (require 'helm-xref)
   (setq xref-show-xrefs-function 'helm-xref-show-xrefs)
