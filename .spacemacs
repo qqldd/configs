@@ -39,28 +39,33 @@ This function should only modify configuration layer settings."
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      helm
-     ;; auto-completion
-     ;; better-defaults
+     (spacemacs-layouts :variables layouts-enable-autosave nil)
+     auto-completion
+     better-defaults
      emacs-lisp
      git
      markdown
+     (multiple-cursors :variables
+                       multiple-cursors-backend 'mc
+                       mc/cmds-to-run-once '())
+     treemacs
      ;; org
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      ;; spell-checking
      ;; syntax-checking
-     ;; version-control
-     (version-control :variables
-                      version-control-diff-tool 'diff-hl)
+     ;; (version-control :variables
+     ;;                  version-control-diff-tool 'diff-hl)
      ;; (c-c++ :variables
      ;;        c-c++-default-mode-for-headers 'c++-mode)
-     shell-scripts
      ;; python
      ;; (go :variables go-tab-width 2)
+     shell-scripts
+     (haskell :variables haskell-completion-backend 'lsp)
+     ;; lsp
      csv
      shell
-     auto-completion
      gtags
      ;; irony-mode
      ;; semantic
@@ -69,6 +74,7 @@ This function should only modify configuration layer settings."
      theming
      org
      yaml
+     rust
      )
 
    ;; List of additional packages that will be installed without being wrapped
@@ -613,6 +619,18 @@ before packages are loaded."
   (require 'funs)
 
   ;; Appearance
+  (setq powerline-default-separator 'slant)
+  ;; (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
+  ;;       doom-themes-enable-italic t) ; if nil, italics is universally disabled
+
+  ;; ;; Enable flashing mode-line on errors
+  ;; (doom-themes-visual-bell-config)
+
+  ;; ;; Enable custom neotree theme
+  ;; (doom-themes-neotree-config)  ; all-the-icons fonts must be installed!
+
+  ;; ;; Corrects (and improves) org-mode's native fontification.
+  ;; (doom-themes-org-config)
 
   (setq linum-format "%d ")
 
