@@ -13,3 +13,6 @@
 [submodule "zsh_custom/plugins/zsh-syntax-highlighting"]
 	path = zsh_custom/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "helm-xref"]
+	path = lisp/helm-xref
+	url = https://github.com/brotzeit/helm-xref.git
