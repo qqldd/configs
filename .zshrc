@@ -100,6 +100,8 @@ source $ZSH/oh-my-zsh.sh
 
 unsetopt share_history
 
+setopt incappendhistory #Immediately append to the history file, not just when a term is killed
+
 [[ $TERM == "dumb" ]] && unsetopt zle && PS1='$ ' && return
 
 # test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
