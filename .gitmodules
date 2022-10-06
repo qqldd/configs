@@ -16,3 +16,6 @@
 [submodule "helm-xref"]
 	path = lisp/helm-xref
 	url = https://github.com/brotzeit/helm-xref.git
+[submodule "neofetch"]
+	path = neofetch
+	url = https://github.com/dylanaraps/neofetch.git
