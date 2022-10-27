@@ -33,6 +33,16 @@ local mykeys = {
     action = act.ActivateLastTab,
   },
   {
+    key = 'P',
+    mods = 'LEADER|SHIFT',
+    action = act.MoveTabRelative(-1),
+  },
+  {
+    key = 'N',
+    mods = 'LEADER|SHIFT',
+    action = act.MoveTabRelative(1),
+  },
+  {
     key = '[',
     mods = 'LEADER',
     action = act.ActivateCopyMode,
