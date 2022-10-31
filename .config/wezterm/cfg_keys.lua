@@ -47,6 +47,11 @@ local mykeys = {
     mods = 'LEADER',
     action = act.ActivateCopyMode,
   },
+  {
+    key = 'z',
+    mods = 'LEADER|CTRL',
+    action = act.SendString '\x1A',
+  },
 }
 for i = 1, 8 do
   -- LEADER + number to activate that tab
