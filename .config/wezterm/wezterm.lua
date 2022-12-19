@@ -12,7 +12,7 @@ return {
     -- The default background color
     background = 'rgb(40,40,40)',
   },
-  window_background_opacity = 0.93,
+  window_background_opacity = 0.9,
   font = wezterm.font ('Hack Nerd Font', { weight = 'Medium' }),
   font_size = 13,
   line_height = 1.1,

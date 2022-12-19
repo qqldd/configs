@@ -28,7 +28,7 @@ local mykeys = {
     action = act.ActivateTabRelative(1),
   },
   {
-    key = 'o',
+    key = 'z',
     mods = 'LEADER',
     action = act.ActivateLastTab,
   },
@@ -41,6 +41,11 @@ local mykeys = {
     key = 'N',
     mods = 'LEADER|SHIFT',
     action = act.MoveTabRelative(1),
+  },
+  {
+    key = 'o',
+    mods = 'LEADER',
+    action = act.ActivatePaneDirection 'Next',
   },
   {
     key = '[',
