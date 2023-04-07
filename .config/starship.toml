@@ -1,0 +1,28 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+scan_timeout = 30
+command_timeout = 500
+
+format = """\
+$username\
+$hostname\
+${custom.fig}\
+$directory\
+$time\
+$env_var\
+$line_break\
+$character"""
+
+[directory]
+truncation_length = 4
+truncate_to_repo = false
+# style = "bold blue"
+
+[time]
+disabled = false
+use_12hr = false
+utc_time_offset = "local"
+style = "yellow"
