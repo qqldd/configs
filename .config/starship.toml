@@ -26,3 +26,15 @@ disabled = false
 use_12hr = false
 utc_time_offset = "local"
 style = "yellow"
+
+[custom.g3]
+when = """ [[ "$PWD" =~ "/google/src/cloud/$USER" ]] """
+style = "white"
+symbol = "GG"
+format = "[${symbol}]($style)"
+
+[custom.fig]
+command = """ echo "${${PWD}#/google/src/cloud/${USER}/}" | cut -d '/' -f 1 """
+when = """ [[ "$PWD" =~ "/google/src/cloud/$USER" ]] """
+style = "bold cyan"
+format = "[🌱($output) ]($style)"
