@@ -11,6 +11,7 @@ $username\
 $hostname\
 ${custom.fig}\
 $directory\
+$cmd_duration\
 $time\
 $env_var\
 $line_break\
